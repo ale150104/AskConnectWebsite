@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --accent-color: #196FAA;
+
+    --light-grey: rgb(165, 165, 165);
+
+    --dark-grey: rgb(108, 108, 108);
+}
+
+body{
+    margin: 0;
+    width:100%;
+    color: white;
+}
+
+article{
+    margin: 0;
+}
+
+
+ .navbar{
+    position: fixed;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+
+
+ .footer{
+    background-color: var(--light-grey);
+ }
+
+
+ .textnowrap{
+    text-wrap: nowrap;
+ }
