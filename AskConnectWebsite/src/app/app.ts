@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,11 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('AskConnectWebsite');
 
+
+  constructor(private router: Router)
+  {
+
+  }
 
 
 
@@ -25,6 +30,13 @@ export class App {
         el.target.classList.add('shrink');
         el.target.classList.remove('expand');
         document.getElementById('navigationMenu')!.style.display = 'none';
+  }
+
+
+
+  navigatebyUrl(url: string)
+  {
+    this.router.navigateByUrl(url);
   }
 
 }

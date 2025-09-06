@@ -3,7 +3,7 @@
 
 <nav (mouseenter)="this.hoverIn($event)" (mouseleave)="this.hoverOut($event)" class="navbar">
     <article>
-        <div class="left" >
+        <div style="position: absolute; top: 15px;" class="left" >
             <span class="material-symbols-outlined">
             menu
         </span>
@@ -13,20 +13,20 @@
         <div class="navigationMenu left" id="navigationMenu">
           
             <ul>
-                <li> Startseite</li>
-                <li>Ablauf</li>
-                <li>Preise</li>
-                <li>FAQ</li>
+                <li (click)="this.navigatebyUrl('/')"> Startseite</li>
+                <li (click)="this.navigatebyUrl('/process')">Ablauf</li>
+                <li (click)="this.navigatebyUrl('/prices')">Preise</li>
+                <li (click)="this.navigatebyUrl('/faq')">FAQ</li>
             </ul>
         </div>
     </article>
 
-    <article>
+    <article style="margin-left: 105px;">
         Logo
 
     </article>
 
-    <article class="right">
+    <article style="align-self: flex-start; margin-top: 15px;" class="right">
         Restlichen Links
 
     </article>
