@@ -14,30 +14,16 @@ body{
     color: white;
 }
 
-article{
-    margin: 0;
-}
-
-
- .navbar{
-    position: fixed;
-    background-color: black;
-    height: 50px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    z-index: 1000;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
- }
-
 
 
  .footer{
     background-color: var(--light-grey);
  }
 
+
+ .center{
+    margin: 0 auto;
+ }
 
  .textnowrap{
     text-wrap: nowrap;

@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 
 
-<section class="mainPage" title="mainPage">
-
-  <article class="firstImage">
-    <img  src="assets/elementor-placeholder-image.png" alt="Placeholder">
-  </article>
-
-  </section>
-
-
-  <section class="presentationSection">
-    <h2 class="title">Wer sind wir?</h2>
-
-    <div>
-          <article>Semih</article>
-          <article>Alex</article>
-    </div>
-
-  </section>
-
-
-
-
-
-  <section class="presentationSection backgroundWhite">
-    <h2 class="title">Was wir anbieten</h2>
-
-    <div>
-      <article>RAG</article>
-
-      <article>KI</article>
-    </div>
-
-  </section>
-
-
-
-  <section class="paragraphSection">
+<nav (mouseenter)="this.hoverIn($event)" (mouseleave)="this.hoverOut($event)" class="navbar">
     <article>
-      <p>Mache den Schritt in die Zukunft - buche hetzt deine erste Beratung und sichere dir entscheidende Wettbewerbsvorteile</p>
-    </article>
-  </section>
+        <div class="left" >
+            <span class="material-symbols-outlined">
+            menu
+        </span>
+        </div>
 
-  <section class="paragraphSection backgroundWhite">
-    <article  style="text-wrap: nowrap;" >
-      <p>Bleiben Sie in Kontakt. Folgen Sie uns auf Instagram und LinkedIN.</p>
+
+        <div class="navigationMenu left" id="navigationMenu">
+          
+            <ul>
+                <li> Startseite</li>
+                <li>Ablauf</li>
+                <li>Preise</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
     </article>
-  </section>
+
+    <article>
+        Logo
+
+    </article>
+
+    <article class="right">
+        Restlichen Links
+
+    </article>
+    
+  </nav>
+
+  <router-outlet></router-outlet>

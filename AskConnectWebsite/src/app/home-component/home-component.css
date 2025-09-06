@@ -1,0 +1,73 @@
+.mainPage{
+    padding-top: 50px;
+}
+
+
+
+.firstImage{
+    width: 100%;
+    height: 250px;
+}
+
+.firstImage img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.presentationSection{
+    height: 300px;
+    background-color: black;
+}
+
+.title{
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.presentationSection div{
+    display: flex;
+    column-gap: 20px;
+
+}
+
+.presentationSection div article {
+    width: 50%;
+    height: 100%;
+    background-color: var(--light-grey);
+    padding: 10px;
+}
+
+
+
+
+.morePadding {
+    padding: 30px;
+}
+
+.paragraphSection{
+    background-color: var(--light-grey);
+    margin: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraphSection article{
+        width: 33%;
+        font-weight: bolder;
+        font-size: x-large;
+        text-wrap: wrap;
+}
+
+
+
+.backgroundWhite{
+    background-color: white;
+    color: black;
+}
+
