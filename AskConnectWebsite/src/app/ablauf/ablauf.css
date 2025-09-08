@@ -4,7 +4,7 @@
 
 
 .banner{
-    border: 2px solid var(--light-grey);
+    border: 2px solid var(--accent-color);
     border-radius: 10px;
     display: flex;
 

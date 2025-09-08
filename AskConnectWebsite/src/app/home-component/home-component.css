@@ -58,6 +58,11 @@
     height: 200px;
     width: auto;
     border-radius: 10px;
+    border: 5px solid var(--accent-color);
+}
+
+.presentationSection div article h3{
+    margin: 0;
 }
 
 .morePadding {
@@ -67,6 +72,11 @@
 
 .textAlignLeft{
     text-align: left;
+}
+
+
+.paragraphSection{
+    background-color: var(--accent-color);
 }
 
 

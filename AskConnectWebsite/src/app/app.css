@@ -38,6 +38,9 @@ article{
 
 
 
+.mybgBlue{
+   background-color: var(--accent-color);
+}
 
 
  .navigationMenu{

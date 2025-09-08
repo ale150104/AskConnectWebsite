@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root{
-    --accent-color: #196FAA;
+    --accent-color: #4f8884;
 
     --light-grey: rgb(165, 165, 165);
 
@@ -12,6 +12,10 @@ body{
     margin: 0;
     width:100%;
     color: black;
+    font-family: 'Tahoma', 'Helvetica', 'Times New Roman', Times, serif;
+    font-size: large;
+
+
 }
 
 

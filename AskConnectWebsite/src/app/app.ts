@@ -56,6 +56,7 @@ export class App {
   {
       (this.navbar?.nativeElement as HTMLElement).classList.remove('shrink');
       (this.navbar?.nativeElement as HTMLElement).classList.add('expand');
+      (this.navbar?.nativeElement as HTMLElement).classList.add('mybgBlue');
 
       document.getElementById('navigationMenu')!.style.display = 'block';
       this.isNavbarOpened = true;
@@ -66,6 +67,7 @@ closeNavbar()
 
     (this.navbar?.nativeElement as HTMLElement).classList.add('shrink');
     (this.navbar?.nativeElement as HTMLElement).classList.remove('expand');
+          (this.navbar?.nativeElement as HTMLElement).classList.remove('mybgBlue');
     document.getElementById('navigationMenu')!.style.display = 'none';
     this.isNavbarOpened = false;
   }
