@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,6 +10,12 @@ import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/rou
 export class App {
   protected readonly title = signal('AskConnectWebsite');
 
+  private isNavbarOpened: boolean = false;
+
+  @ViewChild("navbar") navbar?: ElementRef;
+
+
+  private hoverTimeoutId? : number;
 
   constructor(private router: Router)
   {
@@ -17,21 +23,52 @@ export class App {
   }
 
 
+  hoverIn()
+  {
+    this.hoverTimeoutId = setTimeout(() => {
+      this.openNavbar();
+    }, 250)
 
-  hoverIn(el: any) {
-        console.log(el.target);
-      el.target.classList.remove('shrink');
-      el.target.classList.add('expand');
+  }
+
+  hoverOut()
+  {
+    clearTimeout(this.hoverTimeoutId);
+
+    this.closeNavbar();
+  }
+
+
+  OnChangeNavbarState()
+  {
+
+    if(this.isNavbarOpened)
+    {
+      this.closeNavbar();
+      return;
+    }
+
+    this.openNavbar();
+  }
+
+
+  openNavbar()
+  {
+      (this.navbar?.nativeElement as HTMLElement).classList.remove('shrink');
+      (this.navbar?.nativeElement as HTMLElement).classList.add('expand');
+
       document.getElementById('navigationMenu')!.style.display = 'block';
-  }
-  
-  hoverOut(el:any ) {
-    console.log(el);
-        el.target.classList.add('shrink');
-        el.target.classList.remove('expand');
-        document.getElementById('navigationMenu')!.style.display = 'none';
+      this.isNavbarOpened = true;
   }
 
+closeNavbar()
+  {
+
+    (this.navbar?.nativeElement as HTMLElement).classList.add('shrink');
+    (this.navbar?.nativeElement as HTMLElement).classList.remove('expand');
+    document.getElementById('navigationMenu')!.style.display = 'none';
+    this.isNavbarOpened = false;
+  }
 
 
   navigatebyUrl(url: string)

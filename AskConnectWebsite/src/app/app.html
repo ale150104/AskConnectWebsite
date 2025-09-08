@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 
 
-<nav (mouseenter)="this.hoverIn($event)" (mouseleave)="this.hoverOut($event)" class="navbar">
+<nav #navbar (mouseenter)="this.hoverIn()" (mouseleave)="this.hoverOut()" class="navbar">
     <article>
         <div style="position: absolute; top: 15px;" class="left" >
-            <span class="material-symbols-outlined">
-            menu
+            <span (click)="this.OnChangeNavbarState()" class="material-symbols-outlined">
+                menu
         </span>
+
         </div>
 
 
@@ -23,7 +24,6 @@
 
     <article style="margin-left: 105px;">
         Logo
-
     </article>
 
     <article style="align-self: flex-start; margin-top: 15px;" class="right">
