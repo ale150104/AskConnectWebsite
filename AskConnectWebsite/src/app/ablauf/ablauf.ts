@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-ablauf',
@@ -7,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './ablauf.css'
 })
 export class Ablauf {
+
+    
+  protected show = signal<boolean>(false);
+
+
+    ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.show.update(() => !this.show());
+    }, 100);
+  }
 
 }
