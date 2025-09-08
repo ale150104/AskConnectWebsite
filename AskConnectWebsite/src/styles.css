@@ -33,3 +33,18 @@ body{
  .text-white{
    color: white;
  }
+
+ .paragraphSection{
+    background-color: var(--light-grey);
+    margin: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.backgroundWhite{
+    background-color: white !important;
+    color: black !important;
+}
