@@ -16,8 +16,11 @@
 
 
 .presentationSection{
-    height: 300px;
+    min-height: 300px;
+    height: fit-content;
     background-color: black;
+
+    overflow: hidden;
 }
 
 .title{
@@ -30,34 +33,45 @@
 
 .presentationSection div{
     display: flex;
-    column-gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: calc(100% - 50px);
+    position: relative;
 
 }
 
 .presentationSection div article {
-    width: 50%;
-    height: 100%;
-    background-color: var(--light-grey);
+    width: 45%;
+    max-height: inherit;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    column-gap: 15px;
 }
 
 
 
+
+.presentationSection div article img{
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+}
 
 .morePadding {
     padding: 30px;
 }
 
-.paragraphSection{
-    background-color: var(--light-grey);
-    margin: auto;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.textAlignLeft{
+    text-align: left;
 }
 
+
 .paragraphSection article{
+    text-align: center;
         width: 33%;
         font-weight: bolder;
         font-size: x-large;
@@ -65,9 +79,26 @@
 }
 
 
-
-.backgroundWhite{
-    background-color: white;
-    color: black;
+.verticalLayout div{
+    margin-bottom: 45px;
 }
 
+
+
+.verticalLayout div article{
+    width: 40%;
+    padding: 30px !important;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    text-align: left;
+}
+
+
+
+
+.verticalLayout div article img{
+    margin-top: 80px;
+    align-self: center;
+}

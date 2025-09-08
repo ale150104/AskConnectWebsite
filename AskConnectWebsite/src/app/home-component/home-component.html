@@ -9,11 +9,38 @@
 
 
   <section class="presentationSection">
-    <h2 class="title">Wer sind wir?</h2>
+    <h2 class="title text-white">Wer sind wir?</h2>
 
     <div>
-          <article>Semih</article>
-          <article>Alex</article>
+        @if (show()) 
+        {
+            <article animate.enter="animate__animated animate__fadeInUp" class="text-white">
+            <div>
+              <b>Semih Kalyouncu:</b>
+              <p>Studiert Wirtschaftsingenieurwesen im 7. Semester an der Hochschule Albstadt-Sigmaringen und sammelt als Werkstudent 
+                bei Merces wertvolle Praxiserfahrung. Besonders interessiert an Innovationen und neuen Technologien, 
+                verbindet er technisches Verständnis mit betriebswirtschaftlichem Denken.
+              </p>
+            </div>
+            <img src="assets/person_placeholder.jpg" alt="Das Bild von Semih Kalyouncu">
+
+          </article>
+
+
+
+          <article animate.enter="animate__animated animate__fadeInUp animate__delay-1s" style="padding-top: 130px; padding-bottom: 50px;" class="text-white">
+            <div>
+              <b>Alexander Ortlieb:</b>
+              <p>Studiert Wirtschaftsingenieurwesen im 7. Semester an der Hochschule Albstadt-Sigmaringen und schreibt seine Bachelorarbeit bei Bosch. Sein besonderes Interesse gilt Prozessen und der 
+                Digitalisierung wobei er analytisches Denken mit technischem und wirtschaftlichem Verständnis verbindet.
+              </p>
+            </div>
+            <img src="assets/person_placeholder.jpg" alt="Das Bild von Semih Kalyouncu">
+
+          </article>
+
+        }
+
     </div>
 
   </section>
@@ -21,14 +48,35 @@
 
 
 
-
-  <section class="presentationSection backgroundWhite">
+  <section class="presentationSection backgroundWhite verticalLayout">
     <h2 class="title">Was wir anbieten</h2>
 
     <div>
-      <article>RAG</article>
+      <article animate.enter="animate__animated animate__fadeInLeft animate__delay-2s">
+        <h3>RAG-Chatbots</h3>
 
-      <article>KI</article>
+        <p>Unsere RAG-Chatbots (Retrieval-Augmented Generation) kombinieren die Stärken moderner KI-Sprachmodelle
+          mit unternehmensspeziefischem Wissen. Dadruch erhalten Ihre Kunden präzise, kontextbezogene Antworten - 
+          jederzeit aktuell und zuverlässig.Ob für den Kundenservice, interne Wissensdatenbank oder Supportprozesse: RAG-Chatbots 
+          sorgen für Effizienz, reduzieren Anfragen und steigern die Zufriedenheit</p>
+
+        <img src="assets/elementor-placeholder-image.png" alt="">
+      </article>
+
+
+      <article animate.enter="animate__animated animate__fadeInRight animate__delay-2s">
+
+        <img style="margin-top: 0; margin-bottom: 50px;" src="assets/elementor-placeholder-image.png" alt="">
+
+        <h3>KI-Agenten</h3>
+
+        <p>KI-Agenten übernehmen eigenständig Aufgaben und Prozesse. von der Datenanalyse bis hin zur Automatisierung 
+          komplexer Abläufe. Sie arbeiten proaktiv, lernen aus Erfahrungen und lassen sich flexibel in 
+          bestehende Systeme integrieren. Damit unterstützen KI-Agenten Unternehmen nicht nur bei der Effizienzsteigerung, 
+          sondern eröffnen auch neue Möglichkeiten der digitalen Transformation
+        </p>
+
+      </article>
     </div>
 
   </section>
@@ -37,12 +85,6 @@
 
   <section class="paragraphSection text-white">
     <article>
-      <p>Mache den Schritt in die Zukunft - buche hetzt deine erste Beratung und sichere dir entscheidende Wettbewerbsvorteile</p>
-    </article>
-  </section>
-
-  <section class="paragraphSection backgroundWhite">
-    <article  style="text-wrap: nowrap;" >
-      <p>Bleiben Sie in Kontakt. Folgen Sie uns auf Instagram und LinkedIN.</p>
+      <p>Mache den Schritt in die Zukunft <br> - <br> buche hetzt deine erste Beratung und sichere dir entscheidende Wettbewerbsvorteile</p>
     </article>
   </section>

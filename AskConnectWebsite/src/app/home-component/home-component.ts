@@ -1,11 +1,25 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-home-component',
-  imports: [],
+  imports: [ ],
   templateUrl: './home-component.html',
-  styleUrl: './home-component.css'
+  styleUrl: './home-component.css',
+  
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+  
+  protected show = signal<boolean>(false);
+
+
+    ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.show.update(() => !this.show());
+    }, 100);
+  }
+  
 
 }
+
+
