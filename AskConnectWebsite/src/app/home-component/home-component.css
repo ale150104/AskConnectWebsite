@@ -151,7 +151,10 @@
     font-weight: bolder;
     font-size: x-large;
     text-wrap: wrap;
+    background-color: transparent;
+    color: white;
 }
+
 
 
 .verticalLayout div{
