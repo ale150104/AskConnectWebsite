@@ -1,5 +1,5 @@
 import { Component, ElementRef, signal, ViewChild } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,7 @@ export class App {
 
   @ViewChild("navbar") navbar?: ElementRef;
 
+  @ViewChild("logo") logo?: ElementRef;
 
   private hoverTimeoutId? : number;
 
@@ -57,6 +58,8 @@ export class App {
       (this.navbar?.nativeElement as HTMLElement).classList.remove('shrink');
       (this.navbar?.nativeElement as HTMLElement).classList.add('expand');
       (this.navbar?.nativeElement as HTMLElement).classList.add('mybgBlue');
+      (this.logo?.nativeElement as HTMLElement).classList.add('zoomIn');
+      (this.logo?.nativeElement as HTMLElement).classList.remove('zoomOut');
 
       document.getElementById('navigationMenu')!.style.display = 'block';
       this.isNavbarOpened = true;
@@ -67,7 +70,10 @@ closeNavbar()
 
     (this.navbar?.nativeElement as HTMLElement).classList.add('shrink');
     (this.navbar?.nativeElement as HTMLElement).classList.remove('expand');
-          (this.navbar?.nativeElement as HTMLElement).classList.remove('mybgBlue');
+    (this.navbar?.nativeElement as HTMLElement).classList.remove('mybgBlue');
+    (this.logo?.nativeElement as HTMLElement).classList.add('zoomOut');
+    (this.logo?.nativeElement as HTMLElement).classList.remove('zoomIn');
+
     document.getElementById('navigationMenu')!.style.display = 'none';
     this.isNavbarOpened = false;
   }
@@ -78,4 +84,14 @@ closeNavbar()
     this.router.navigateByUrl(url);
   }
 
+  navigateWithFragment(event: Event, url: string, fragment: string)
+  {
+    this.router.navigate([url], {fragment: fragment});
+  }
+
+
+  stopPropagation(event: Event)
+  {
+    event.stopImmediatePropagation();
+  }
 }

@@ -4,7 +4,8 @@ import { Ablauf } from './ablauf/ablauf';
 import { Faq } from './faq/faq';
 import { Preise } from './preise/preise';
 
-export const routes: Routes = [  
+export const routes: Routes = [ 
+{ path: 'home', redirectTo: '', pathMatch: 'full'},
  { path: '', component: HomeComponent },
  { path: 'process', component: Ablauf},
 { path: 'faq', component: Faq},

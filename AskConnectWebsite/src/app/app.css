@@ -38,6 +38,8 @@ article{
 
 
 
+
+
 .mybgBlue{
    background-color: var(--accent-color);
 }
@@ -70,6 +72,30 @@ article{
   }
 }
 
+@keyframes zoomIn
+{
+   0%
+   {
+      transform: scale(1);
+   }
+   100%
+   {
+      transform: scale(2);
+   }
+}
+
+@keyframes zoomOut
+{
+   0%
+   {
+      transform: scale(2);
+   }
+   100%
+   {
+      transform: scale(1);
+   }
+}
+
 
  @keyframes navClosing {
     0%{
@@ -82,11 +108,52 @@ article{
 
 
  .left{
+   min-width: 20px;
     text-align: left;
     padding-left: 25px;
+ }
+
+ .logo{
+   height: 100%;
+   align-self: center;
+   justify-self: center;
+   margin-left: 105px;
+   display: flex;
+   align-items: center;
+ }
+
+ @media (max-width: 480px)
+ {
+   .right
+   {
+      visibility: hidden;
+   }
+
+ }
+
+ @media (min-width: 481px)
+ {
+   .zoomIn
+   {
+      animation: zoomIn 0.3s ease-in-out forwards;
+   }
+
+   .zoomOut
+   { 
+      animation: zoomOut 0.3s ease-in-out forwards;
+   }
  }
 
  .right{
     text-align: right;
     max-height: 50px;
+    display: flex;
+    column-gap: 40px;
+    margin-right: 30px;
+   
+ }
+
+ .right p {
+   text-decoration: underline;
+   font-size: smaller;
  }
