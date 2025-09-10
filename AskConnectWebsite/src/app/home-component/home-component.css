@@ -31,35 +31,100 @@
 }
 
 
-.presentationSection div{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    overflow: hidden;
-    max-height: calc(100% - 50px);
-    position: relative;
+@media (max-width: 1023px)
+{
+    .presentationSection div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .presentationSection div article {
+        width: 80%;
+        max-height: inherit;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 15px;
+    
+    }
+
+    .presentationSection div article img{
+        height: auto;
+        width: 50%;
+                max-width: 200px;
+        border-radius: 10px;
+        border: 5px solid var(--accent-color);
+    }
+
+    .presentationSection div article img {
+        order: 1;
+    }
+
+    .presentationSection div article div{
+        order: 3;
+    }
+
+
+    .paragraphSection article{
+        width: 80%;
+    }
+
+    .verticalLayout div article{
+        width: 90%;
+    }
+
 
 }
 
-.presentationSection div article {
-    width: 45%;
-    max-height: inherit;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-start;
-    column-gap: 15px;
+@media (min-width: 1024px)
+{
+    .presentationSection > div{
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    .presentationSection div article {
+        width: 45%;
+        max-height: inherit;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        column-gap: 15px;
+    
+    }
+
+    
+
+
+    .presentationSection div article img{
+        height: auto;
+        width: 50%;
+        max-width: 200px;
+        border-radius: 10px;
+        border: 5px solid var(--accent-color);
+    }
+
+    
+    .paragraphSection article{
+        width: 33%;
+    }
+
+    .verticalLayout div article{
+        width: 40%;
+    }
+
+}
+
+.presentationSection div article div > *{
+    display: block;
 }
 
 
-
-
-.presentationSection div article img{
-    height: 200px;
-    width: auto;
-    border-radius: 10px;
-    border: 5px solid var(--accent-color);
-}
 
 .presentationSection div article h3{
     margin: 0;
@@ -77,15 +142,15 @@
 
 .paragraphSection{
     background-color: var(--accent-color);
+    height: fit-content;
 }
 
 
 .paragraphSection article{
     text-align: center;
-        width: 33%;
-        font-weight: bolder;
-        font-size: x-large;
-        text-wrap: wrap;
+    font-weight: bolder;
+    font-size: x-large;
+    text-wrap: wrap;
 }
 
 
@@ -96,7 +161,6 @@
 
 
 .verticalLayout div article{
-    width: 40%;
     padding: 30px !important;
     display: flex;
     flex-direction: column;
