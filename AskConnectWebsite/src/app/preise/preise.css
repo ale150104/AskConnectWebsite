@@ -1,5 +1,10 @@
 .main{
     padding-top: 50px;
+
+    --animate-duration: 0.5s;
+    --animate-delay: 0.7s;
+
+    min-height: calc(100vh - 507px);
 }
 
 .main h1,h2{

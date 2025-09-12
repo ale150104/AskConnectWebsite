@@ -15,6 +15,7 @@ body{
     font-family: 'Tahoma', 'Helvetica', 'Times New Roman', Times, serif;
     font-size: large;
 
+    cursor: default;
 
 }
 
@@ -51,6 +52,8 @@ body{
 .paragraphSection article {
     background-color: var(--light-grey);
     color: var(--dark-grey);
+
+    text-align: center;
 }
 
 .backgroundWhite{
