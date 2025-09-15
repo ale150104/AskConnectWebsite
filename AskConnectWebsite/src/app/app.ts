@@ -91,6 +91,10 @@ closeNavbar()
   navigateWithFragment(event: Event, url: string, fragment: string)
   {
     this.router.navigate([url], {fragment: fragment});
+
+        setTimeout(() => {
+      this.closeNavbar();
+    },100);
   }
 
 
