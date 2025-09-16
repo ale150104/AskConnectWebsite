@@ -54,7 +54,7 @@
     .presentationSection div article img{
         height: auto;
         width: 50%;
-                max-width: 200px;
+        max-width: 200px;
         border-radius: 10px;
         border: 5px solid var(--accent-color);
     }
@@ -176,6 +176,6 @@
 
 
 .verticalLayout div article img{
-    margin-top: 80px;
+    /* margin-top: 80px; */
     align-self: center;
 }
